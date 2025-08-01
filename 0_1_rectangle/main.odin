@@ -51,6 +51,7 @@ main :: proc() {
 	when ODIN_OS == .Darwin {
 		glfw.WindowHint(glfw.OPENGL_FORWARD_COMPAT, gl.TRUE)
 	}
+	glfw.WindowHint(glfw.RESIZABLE, glfw.FALSE)
 
 	window := glfw.CreateWindow(WINDOW_WIDTH, WINDOW_HEIGHT, "Hello from odin", nil, nil)
 	defer glfw.DestroyWindow(window)
